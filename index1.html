@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment Project</title>
+    <link rel="stylesheet" href="./Vandors/bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="./Vandors/fontawesome/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,
+wght@0,100..900;1,100..900&family=Roboto+Slab:wght@100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body id="my-page" class="montserrat">
+    <!-- Nav-bar -->
+    <nav class="navbar navbar-expand-lg" id="nav-bar">
+        <div class="container-fluid">
+            <div>
+                <a class="navbar-brand" href="#" style="font-size: 1.3rem; font-weight: bold;">Business<br>Name</a>
+            </div>
+            <div class="search-bar-container">
+                <i class="fa fa-search icon-small" aria-hidden="true"></i>
+                <input type="search" aria-label="Search" class="search-bar form-control" id="search-input">
+                <button class="all-btn" id="search-btn">Search</button>
+            </div>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse menu-div roboto-slab" id="navbarSupportedContent">
+                <div class="nav-item ">
+                    <a class="nav-link" aria-current="page" href="#my-page">Home</a>
+                </div>
+                <div>
+                    <a class="nav-link" href="">Cart</a>
+                </div>
+                <div class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#items-box" role="button" data-bs-toggle="dropdown"
+                        aria-expanded="false">
+                        Categories
+                    </a>
+                    <div class="dropdown-menu">
+                        <ul class="list-group">
+                            <li class="list-group-item active" aria-current="true"><a class="nav-link" href="#items-box">All</a></li>
+                            <li class="list-group-item"><a class="nav-link" href="#items-box">Laptops</a></li>
+                            <li class="list-group-item"><a class="nav-link" href="#items-box">Tablets</a></li>
+                            <li class="list-group-item"><a class="nav-link" href="#items-box">Smartphones</a></li>
+                            <li class="list-group-item"><a class="nav-link" href="#items-box">Headphones</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div>
+                    <a class="nav-link" aria-current="page" href="#contacts">Contacts</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <!-- Header -->
+    <div id="header" class="container-fluid">
+        <div class="row">
+            <div class="col-md-6 d-flex justify-content-center flex-column position-retive">
+                <h2>Get <span style="color: blue;">Best <br> Device</span> With <br> Lowest Price.</h2>
+                <br>
+                <p>iPad is a line of tablet computers designed, developed and marketed by Apple Inc.,
+                    which run the iOS and iPad OS mobile operating systems. &nbsp;</p>
+                <br>
+                <a href="#items-box">
+                <button class="all-btn"> Explore Now </button></a>
+            </div>
+            <div class="col-md-6 d-flex align-items-center justify-content-center">
+                <div id="carouselExampleIndicators" class="carousel slide">
+                    <div class="carousel-indicators">
+                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0"
+                            class="active" aria-current="true" aria-label="Slide 1"></button>
+                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+                            aria-label="Slide 2"></button>
+                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+                            aria-label="Slide 3"></button>
+                    </div>
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <div class="carousel-image-container">
+                                <img src="./images/headphone.png" class="d-block w-100" alt="headphone">
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <div class="carousel-image-container">
+                                <img src="./images/iphone14pro.png" class="d-block w-100" alt="iphone14pro">
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <div class="carousel-image">
+                                <img src="./images/playstation-5.png" class="d-block w-100" alt="playstation-5">
+                            </div>
+                        </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+                        data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden"></span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+                        data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Categories -->
+    <div id="categories-box">
+        <div class="category-card">
+            <i class="fa-solid fa-border-all"></i>
+            <button class="all-btn" onclick="filterItems('all')">All</button>
+        </div>
+        <div class="category-card">
+            <i class="fa-solid fa-laptop"></i>
+            <button class="all-btn" onclick="filterItems('laptops')">Laptops</button>
+        </div>
+        <div class="category-card">
+            <i class="fa-solid fa-tablet-screen-button"></i>
+            <button class="all-btn" onclick="filterItems('tablets')">Tablets</button>
+        </div>
+        <div class="category-card">
+            <i class="fa-solid fa-mobile-screen"></i>
+            <button class="all-btn" onclick="filterItems('smartphones')">Smartphones</button>
+        </div>
+        <div class="category-card">
+            <i class="fa-solid fa-headphones"></i>
+            <button class="all-btn" onclick="filterItems('headphones')">Headphones</button>
+        </div>
+    </div>
+
+    <!-- items-box -->
+    <div id="items-box" class="items-container">
+        <div class="items">
+            <div class="items-thumbnail">
+                <img src="./images/laptop.jpg" alt="Laptop-1">
+            </div>
+            <h3 class="items-title">Laptop</h3>
+            <p class="product-category">Laptops</p>
+            <span class="price">MMK -#####</span>
+            <button class="all-btn">Add To Cart</button>
+        </div>
+
+        <div class="items">
+            <div class="items-thumbnail">
+                <img src="./images/laptop-2.jpg" class="" alt="laptop-2">
+            </div>
+            <h3 class="items-title">Laptop-2</h3>
+            <p class="product-category">Laptops</p>
+            <span class="price">MMK -#####</span>
+            <button class="all-btn">Add To Cart</button>
+        </div>
+        <div class="items">
+            <div class="items-thumbnail">
+                <img src="./images/headphone-2.jpg" class="" alt="headphone-2">
+            </div>
+            <h3 class="items-title">Headphone-2</h3>
+            <p class="product-category">Headphones</p>
+            <span class="price">MMK -#####</span>
+            <button class="all-btn">Add To Cart</button>
+        </div>
+
+        <div class="items">
+            <div class="items-thumbnail">
+                <img src="./images/headphone.png" class="" alt="headphone-1">
+            </div>
+            <h3 class="items-title">Headphone-1</h3>
+            <p class="product-category">Headphones</p>
+            <span class="price">MMK -#####</span>
+            <button class="all-btn">Add To Cart</button>
+        </div>
+
+
+        <div class="items">
+            <div class="items-thumbnail">
+                <img src="./images/samsung-galaxy.jpg" class="" alt="samsung-galaxy">
+            </div>
+            <h3 class="items-title">Samsung-galaxy</h3>
+            <p class="product-category">Smartphones</p>
+            <span class="price">MMK -#####</span>
+            <button class="all-btn">Add To Cart</button>
+        </div>
+
+        <div class="items">
+            <div class="items-thumbnail">
+                <img src="./images/samsung-fold.jpg" class="" alt="samsung-fold">
+            </div>
+            <h3 class="items-title">Samsung-fold</h3>
+            <p class="product-category">Smartphones</p>
+            <span class="price">MMK -#####</span>
+            <button class="all-btn">Add To Cart</button>
+        </div>
+
+        <div class="items">
+            <div class="items-thumbnail">
+                <img src="./images/smart-watch.png" class="" alt="smart-watch">
+            </div>
+            <h3 class="items-title">Smart Watch</h3>
+            <p class="product-category">Smart-watches</p>
+            <span class="price">MMK -#####</span>
+            <button class="all-btn">Add To Cart</button>
+        </div>
+
+        <div class="items">
+            <div class="items-thumbnail">
+                <img src="./images/smart-phone.jpg" class="" alt="smart-phone">
+            </div>
+            <h3 class="items-title">Smart-phone</h3>
+            <p class="product-category">Smartphones</p>
+            <span class="price">MMK -#####</span>
+            <button class="all-btn">Add To Cart</button>
+        </div>
+
+        <div class="items">
+            <div class="items-thumbnail">
+                <img src="./images/tablet.jpg" class="" alt="tablet">
+            </div>
+            <h3 class="items-title">Tablet-2</h3>
+            <p class="product-category">Tablets</p>
+            <span class="price">MMK -#####</span>
+            <button class="all-btn">Add To Cart</button>
+        </div>
+        <div class="items">
+            <div class="items-thumbnail">
+                <img src="./images/iphone16-pro.jpg" class="" alt="iphone16-pro">
+            </div>
+            <h3 class="items-title">Iphone16-pro</h3>
+            <p class="product-category">Smartphones</p>
+            <span class="price">MMK -#####</span>
+            <button class="all-btn">Add To Cart</button>
+        </div>
+
+
+        <div class="items">
+            <div class="items-thumbnail">
+                <img src="./images/airpods.jpg" class="" alt="air-pods">
+            </div>
+            <h3 class="items-title">Air-pods</h3>
+            <p class="product-category">Headphones</p>
+            <span class="price">MMK -#####</span>
+            <button class="all-btn">Add To Cart</button>
+        </div>
+        <div class="items">
+            <div class="items-thumbnail">
+                <img src="./images/airpod-max.jpg" class="" alt="airpod-max">
+            </div>
+            <h3 class="items-title">Airpod-max</h3>
+            <p class="product-category">Headphones</p>
+            <span class="price">MMK -#####</span>
+            <button class="all-btn">Add To Cart</button>
+        </div>
+    </div>
+    <!-- discounts-box -->
+    <div id="discounts-box" class="container-fluid">
+        <div class="row">
+            <div class="col-md-6 d-flex justify-content-center flex-column position-relative discount-text-content">
+                <h2>Get a <span class="highlight">15% Discount</span> on all
+                    Laptops.</h2>
+                <br>
+                <p>Limited-time offer! Upgrade your tech with our high-performance laptops.
+                    Find the perfect one for your work or entertainment needs and save big.</p>
+                <br>
+                <a href="#items-box">
+                <button class="all-btn"> Shop Now </button></a>
+            </div>
+            <div class="col-md-6 d-flex align-items-center justify-content-center">
+                <div class="discount-image-container">
+                    <img src="./images/product2.png" alt="Laptop" class="img-fluid">
+                </div>
+            </div>
+        </div>
+    </div>
+      <!-- Contacts -->
+       <div class="container-fluid text-center roboto-slab" id="contacts">
+        <h2>Contacts</h2>
+        <div class="row">
+            <div class="col-md-5 text-start">
+                <p>Contact us and we'll get back to you within 24 hours.</p>
+                <span><a href="www.facebook.com"><i class="fa-brands fa-facebook icon-lag"></i></a></span>
+                <span></i><a href="www.instagram.com"><i class="fa-brands fa-instagram icon-lag"></i></a></span>
+                <span></i><a href="www.x.com"><i class="fa-brands fa-x-twitter icon-lag"></i></a></span>
+            </div>
+            <div class="col-md-7">
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="mb-3">
+                            <input type="text" class="form-control" placeholder="Name">
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="mb-3">
+                            <input type="email" class="form-control" placeholder="Email">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="mb-3">
+                                <textarea rows="5" class="form-control" placeholder="Message"></textarea>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12 text-start">
+                            <div class="mb-3">
+                                <botton class="all-btn">Send</botton>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="./Vandors/jquary/jquery-3.7.1.min.js"></script>
+    <script src="./Vandors/bootstrap/bootstrap.bundle.min.js"></script>
+    <script>
+        $(document).ready(() => {
+            const items = $('.items');
+            // Search bar Function
+            const searchItems = () => {
+                const searchTerm = $('#search-input').val().toLowerCase();
+
+                items.each(function () {
+                    const item = $(this);
+                    const titleElement = item.find('.items-title');
+
+                    if (titleElement.length) {
+                        const title = titleElement.text().toLowerCase();
+
+                        if (title.includes(searchTerm)) {
+                            item.removeClass('d-none');
+                        } else {
+                            item.addClass('d-none');
+                        }
+                    }
+                });
+            };
+
+            // Add event listeners
+            $('#search-input').on('input', searchItems);
+            $('#search-btn').on('click', searchItems);
+
+            // Catagories drodown add class
+            $('.dropdown-menu .list-group .list-group-item').click((event) => {
+                $('.dropdown-menu .list-group .list-group-item').removeClass('active')
+
+                const navButton = $(event.currentTarget);
+                navButton.addClass('active')
+
+                const category = navButton.text().trim().toLowerCase();
+                filterItems(category);
+            })
+            //    To appear button when the items is hover
+            $('.items').hover(
+                function () {
+                    $(this).find('button').css('display', 'block')
+                },
+                function () {
+                    $(this).find('button').css('display', 'none')
+                }
+            );
+
+            window.filterItems = (category) => {
+                items.each(function () {
+                    const item = $(this);
+                    const productCategory = item.find('.product-category').text().trim().toLowerCase();
+
+                    if (category === 'all' || productCategory === category) {
+                        item.removeClass('d-none');
+                    } else {
+                        item.addClass('d-none');
+                    }
+                });
+            };
+        });
+
+    </script>
+</body>
+
+</html>
