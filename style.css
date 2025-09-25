@@ -250,6 +250,7 @@ h2 {
     color: #022554;
     border: #022554 1px solid;
     border-radius: 50px;
+    padding-bottom: 10px;
 }
 @media (max-width: 767px) {
     #discounts-box .row {
@@ -312,4 +313,5 @@ h2 {
     #categories-box {
          grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
     }
+
 }
