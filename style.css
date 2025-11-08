@@ -1,7 +1,6 @@
-/* Custom attribute */
 body {
     background-color: #ffffff;
-    margin: 25px;
+    margin: 20px;
     margin-top: 0;
 }
 
@@ -32,24 +31,42 @@ h2 {
     transition: all 0.3s ease;
     box-shadow: 0 5px 15px #667eea66;
 }
-.all-btn:hover{
-     background: linear-gradient(135deg, #586dca 0%, #51336e 100%);
+
+.all-btn:hover {
+    background: linear-gradient(135deg, #586dca 0%, #51336e 100%);
 }
 
 .icon-small {
     font-size: 20px;
-    padding: 0 10px;
-}
-.icon-lag{
-     font-size: 50px;
-    padding: 20px;
-}
-/* Nav-Bar */
-#nav-bar {
-    background-color:  #ffffff;
-    margin-bottom: 30px;
 }
 
+.icon-large {
+    font-size: 50px;
+}
+
+/* Nav-Bar */
+#nav-bar {
+    background-color: #ffffff;
+    margin-bottom: 30px;
+}
+.nav-items-container {
+   margin: 5px 0;
+}
+.nav-item {
+    font-size: 1.2rem;
+    text-align: center;
+    border: none;
+     width: 25%;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    margin: 0 5px;
+}
+.nav-active, .nav-item:hover {
+    background-color: #6879e3;
+    font-weight: 600;
+    color: #fff;
+    border-radius: 10px;
+}
 .menu-div {
     width: 30% !important;
     display: flex;
@@ -100,6 +117,7 @@ h2 {
     background: #fff;
     box-shadow: 0 5px 15px #0000001a;
 }
+
 /* Header */
 #header {
     background-color: #031833;
@@ -132,6 +150,18 @@ h2 {
     position: relative;
     cursor: pointer;
     font-family: "Roboto Slab", serif;
+     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    animation: fadeIn 1.5s ease-out forwards;
+}
+
+.items:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 15px #0000001a;
+    z-index: 2;
+}
+
+.items:hover button {
+    display: block;
 }
 
 .items-thumbnail img {
@@ -140,7 +170,7 @@ h2 {
 }
 
 .items-container {
-    margin-top:10px;
+    margin-top: 10px;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     column-gap: 25px;
@@ -148,48 +178,53 @@ h2 {
     background-color: #041833;
     border-radius: 30px;
     padding: 30px;
+    overflow: visible;
 }
 
 .items button {
     display: none;
     position: absolute;
-    left: calc(50%-46px);
-    top: calc(50%-50px);
+    left: calc(50% - 70px);
+    top: calc(50% - 70px);
+    z-index: 10;
     transition: 1s;
 }
+
 /* --- Categories --- */
 #categories-box {
-    padding: 60px 0;
+    margin: 20px 0;
     text-align: center;
-     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    column-gap: 25px;
-    row-gap: 20px;
-}
-
-#categories-box .section-title {
-    font-weight: bold;
-    color: #333;
-    margin-bottom: 10px;
-}
-
-#categories-box .section-description {
-    color: #666;
-    margin-bottom: 40px;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: row;
 }
 
 .category-card {
     background-color: #fff;
-    border: 1px solid #e0e0e0;
-    border-radius: 10px;
+    border: 2px solid #041833;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
     padding: 20px;
+    margin: 10px;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    height: 100%;
+    cursor: pointer;
 }
+/* .category-card button {
+    margin-top: 10px;
+    padding: 8px 15px;
+    font-size: 0.9rem;
+    border-radius: 30px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+} */
 
 .category-card:hover {
     transform: translateY(-5px);
@@ -210,10 +245,10 @@ h2 {
 
 /* --- Discounts Section --- */
 #discounts-box {
-    background-color:#f0f4fc;
+    background-color: #f0f4fc;
     border-radius: 50px;
     padding: 10px;
-    color:#022554;
+    color: #022554;
 }
 
 #discounts-box .row {
@@ -240,25 +275,72 @@ h2 {
     display: block;
     transition: 1s;
 }
-.discount-image-container img:hover{
+
+.discount-image-container img:hover {
     width: 100%;
     height: auto;
 }
 
+/* up arrow */
+#up-arrow {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background-color: #083b7e;
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    box-shadow: 0 5px 15px #00000026;
+    transition: background-color 0.3s ease;
+    z-index: 1000;
+    text-decoration: none !important;
+}
+
+#up-arrow:hover {
+    background-color: #0d6efd;
+    transform: scale(1.1);
+}
+
 /* contacts */
-#contacts{
+#contacts {
     color: #022554;
     border: #022554 1px solid;
     border-radius: 50px;
     padding-bottom: 10px;
 }
+
+#header,
+#discounts-box {
+    animation: fadeIn 1.5s ease-in forwards;
+}
+
+/* Animation */
+ @keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+} 
+
+/* Responsive Styles */
 @media (max-width: 767px) {
     #discounts-box .row {
         text-align: center;
     }
+
     .discount-text-content {
         padding: 0 20px;
     }
+
     .discount-image-container {
         margin-top: 30px;
     }
@@ -285,16 +367,37 @@ h2 {
         position: absolute;
         pointer-events: none;
     }
-      #categories-box {
-         grid-template-columns: 1fr;
+    .category-card{
+        width: 70px;
+        height: 70px;
     }
-    body div{
-        border-radius: 25px;
+
+    #all-categories {
+        display: none;
+    }
+
+    .category-card i {
+        font-size: 2rem;
+        color: #031833;
+        margin-bottom: 5px;
+    }
 }
 
 @media (min-width: 431px) and (max-width: 750px) {
     .items-container {
         grid-template-columns: 1fr 1fr;
+    }
+    .category-card {
+        width: 100px;
+        height: 100px;
+        padding: 10px;
+        margin: 5px;
+    }
+
+    .category-card i {
+        font-size: 2.5rem;
+        color: #031833;
+        margin-bottom: 10px;
     }
 }
 
@@ -302,8 +405,9 @@ h2 {
     .items-container {
         grid-template-columns: 1fr 1fr 1fr;
     }
-     #categories-box {
-         grid-template-columns: 1fr 1fr 1fr ;
+
+    #categories-box {
+        grid-template-columns: 1fr 1fr 1fr;
     }
 }
 
@@ -311,10 +415,9 @@ h2 {
     .items-container {
         grid-template-columns: 1fr 1fr 1fr 1fr;
     }
+
     #categories-box {
-         grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
     }
 
 }
-
-
