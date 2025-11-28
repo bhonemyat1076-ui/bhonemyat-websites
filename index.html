@@ -5,8 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Assignment Project</title>
-    <link rel="stylesheet" href="bootstrap.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+    <link rel="stylesheet" href="./Vandors/bootstrap/bootstrap.min.css">
+  <link rel="stylesheet" href="./Vandors/fontawesome/css/all.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,
@@ -34,15 +34,18 @@ wght@0,100..900;1,100..900&family=Roboto+Slab:wght@100..900&display=swap" rel="s
             </button>
             <div class="collapse navbar-collapse menu-div roboto-slab nav-items-container" id="navbarSupportedContent">
                 <div class="nav-item nav-active">
-                    <a class="nav-link" aria-current="page" href="#my-page">Home</a>
+                    <a class="nav-link" aria-current="page" href="#my-page"><i class="fa-solid fa-house"></i><span>Home</span></a>
                 </div>
                 <div class="nav-item">
-                    <a class="nav-link" href="#items-box">Cart</a>
+                    <a class="nav-link" href="#items-box"><i class="fa-solid fa-cart-shopping"></i><span>Cart</span></a>
                 </div>
-                <div class="nav-item dropdown">
+                <div class="nav-item" id="category-icon">
+                    <a class="nav-link" href="#categories-box"> <i class="fa-solid fa-list"></i></a>
+                </div>
+                <div class="nav-item dropdown"  id="category-dropdown">
                     <a class="nav-link dropdown-toggle" href="#items-box" role="button" data-bs-toggle="dropdown"
                         aria-expanded="false">
-                        Categories
+                        <span>Categories</span>
                     </a>
                     <div class="dropdown-menu">
                         <ul class="list-group">
@@ -56,7 +59,7 @@ wght@0,100..900;1,100..900&family=Roboto+Slab:wght@100..900&display=swap" rel="s
                     </div>
                 </div>
                 <div class="nav-item">
-                    <a class="nav-link" aria-current="page" href="#contacts">Contacts</a>
+                    <a class="nav-link" aria-current="page" href="#contacts"><i class="fa-solid fa-phone"></i><span>Contacts</span></a>
                 </div>
             </div>
         </div>
@@ -148,7 +151,7 @@ wght@0,100..900;1,100..900&family=Roboto+Slab:wght@100..900&display=swap" rel="s
 
         <div class="items">
             <div class="items-thumbnail">
-                <img src="./images/laptop-2.jpg" class="" alt="laptop-2">
+                <img src="./images/laptop-2.jpg" alt="laptop-2">
             </div>
             <h3 class="items-title">Laptop-2</h3>
             <p class="product-category">Laptops</p>
@@ -157,7 +160,7 @@ wght@0,100..900;1,100..900&family=Roboto+Slab:wght@100..900&display=swap" rel="s
         </div>
         <div class="items">
             <div class="items-thumbnail">
-                <img src="./images/headphone-2.jpg" class="" alt="headphone-2">
+                <img src="./images/headphone-2.jpg" alt="headphone-2">
             </div>
             <h3 class="items-title">Headphone-2</h3>
             <p class="product-category">Headphones</p>
@@ -167,7 +170,7 @@ wght@0,100..900;1,100..900&family=Roboto+Slab:wght@100..900&display=swap" rel="s
 
         <div class="items">
             <div class="items-thumbnail">
-                <img src="./images/headphone.png" class="" alt="headphone-1">
+                <img src="./images/headphone.png" alt="headphone-1">
             </div>
             <h3 class="items-title">Headphone-1</h3>
             <p class="product-category">Headphones</p>
@@ -178,7 +181,7 @@ wght@0,100..900;1,100..900&family=Roboto+Slab:wght@100..900&display=swap" rel="s
 
         <div class="items">
             <div class="items-thumbnail">
-                <img src="./images/samsung-galaxy.jpg" class="" alt="samsung-galaxy">
+                <img src="./images/samsung-galaxy.jpg" alt="samsung-galaxy">
             </div>
             <h3 class="items-title">Samsung-galaxy</h3>
             <p class="product-category">Smartphones</p>
@@ -188,7 +191,7 @@ wght@0,100..900;1,100..900&family=Roboto+Slab:wght@100..900&display=swap" rel="s
 
         <div class="items">
             <div class="items-thumbnail">
-                <img src="./images/samsung-fold.jpg" class="" alt="samsung-fold">
+                <img src="./images/samsung-fold.jpg" alt="samsung-fold">
             </div>
             <h3 class="items-title">Samsung-fold</h3>
             <p class="product-category">Smartphones</p>
@@ -198,7 +201,7 @@ wght@0,100..900;1,100..900&family=Roboto+Slab:wght@100..900&display=swap" rel="s
 
         <div class="items">
             <div class="items-thumbnail">
-                <img src="./images/smart-watch.png" class="" alt="smart-watch">
+                <img src="./images/smart-watch.png" alt="smart-watch">
             </div>
             <h3 class="items-title">Smart Watch</h3>
             <p class="product-category">Smart-watches</p>
@@ -208,7 +211,7 @@ wght@0,100..900;1,100..900&family=Roboto+Slab:wght@100..900&display=swap" rel="s
 
         <div class="items">
             <div class="items-thumbnail">
-                <img src="./images/smart-phone.jpg" class="" alt="smart-phone">
+                <img src="./images/smart-phone.jpg" alt="smart-phone">
             </div>
             <h3 class="items-title">Smart-phone</h3>
             <p class="product-category">Smartphones</p>
@@ -218,7 +221,7 @@ wght@0,100..900;1,100..900&family=Roboto+Slab:wght@100..900&display=swap" rel="s
 
         <div class="items">
             <div class="items-thumbnail">
-                <img src="./images/tablet.jpg" class="" alt="tablet">
+                <img src="./images/tablet.jpg" alt="tablet">
             </div>
             <h3 class="items-title">Tablet-2</h3>
             <p class="product-category">Tablets</p>
@@ -227,7 +230,7 @@ wght@0,100..900;1,100..900&family=Roboto+Slab:wght@100..900&display=swap" rel="s
         </div>
         <div class="items">
             <div class="items-thumbnail">
-                <img src="./images/iphone16-pro.jpg" class="" alt="iphone16-pro">
+                <img src="./images/iphone16-pro.jpg" alt="iphone16-pro">
             </div>
             <h3 class="items-title">Iphone16-pro</h3>
             <p class="product-category">Smartphones</p>
@@ -238,7 +241,7 @@ wght@0,100..900;1,100..900&family=Roboto+Slab:wght@100..900&display=swap" rel="s
 
         <div class="items">
             <div class="items-thumbnail">
-                <img src="./images/airpods.jpg" class="" alt="air-pods">
+                <img src="./images/airpods.jpg" alt="air-pods">
             </div>
             <h3 class="items-title">Air-pods</h3>
             <p class="product-category">Headphones</p>
@@ -247,7 +250,7 @@ wght@0,100..900;1,100..900&family=Roboto+Slab:wght@100..900&display=swap" rel="s
         </div>
         <div class="items">
             <div class="items-thumbnail">
-                <img src="./images/airpod-max.jpg" class="" alt="airpod-max">
+                <img src="./images/airpod-max.jpg" alt="airpod-max">
             </div>
             <h3 class="items-title">Airpod-max</h3>
             <p class="product-category">Headphones</p>
@@ -315,8 +318,8 @@ wght@0,100..900;1,100..900&family=Roboto+Slab:wght@100..900&display=swap" rel="s
             </div>
         </div>
     </div>
-    <script src="jquery-3.7.1.min.js"></script>
-    <script src="bootstrap.bundle.min.js"></script>
+    <script src="./Vandors/jquary/jquery-3.7.1.min.js"></script>
+    <script src="./Vandors/bootstrap/bootstrap.bundle.min.js"></script>
     <script>
         $(document).ready(() => {
             $('.navbar .nav-item').click((event) => {
@@ -326,6 +329,7 @@ wght@0,100..900;1,100..900&family=Roboto+Slab:wght@100..900&display=swap" rel="s
             });
 
             const items = $('.items');
+            const itemsBox = $('#items-box');
             // Search bar Function
             const searchItems = () => {
                 const searchTerm = $('#search-input').val().toLowerCase();
@@ -344,10 +348,20 @@ wght@0,100..900;1,100..900&family=Roboto+Slab:wght@100..900&display=swap" rel="s
                         }
                     }
                 });
+                if (itemsBox.length) {
+                    $('html, body').animate({
+                        scrollTop: itemsBox.offset().top 
+                    });
+                }
             };
 
             // Add event listeners
-            $('#search-input').on('input', searchItems);
+           $('#search-input').on('keypress', function(e) {
+                if (e.which === 13) { 
+                    e.preventDefault(); 
+                    searchItems();
+                }
+            });
             $('#search-btn').on('click', searchItems);
 
             // Catagories drodown add class
@@ -386,6 +400,5 @@ wght@0,100..900;1,100..900&family=Roboto+Slab:wght@100..900&display=swap" rel="s
 
     </script>
 </body>
-
 
 </html>
